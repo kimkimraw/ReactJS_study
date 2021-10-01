@@ -75,11 +75,18 @@ const ListItems = () => {
 }
 
 
+// イベントハンドリング
+const HandleChange = (e) =>{
+  console.log(e.target.value);
+};
 
+const InputText = () => {
+  return <input type="text" defaultValue="" onChange={HandleChange} />;
+}
 
 // Appコンポーネントの戻り値をセット
 export default function App(){
-  return <ListItems />;
+  return <InputText />;
 }
 
 // export default App;
